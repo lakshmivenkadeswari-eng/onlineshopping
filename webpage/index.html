@@ -602,6 +602,39 @@ nav ul li a:hover{
     }
 }
 
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 18px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    background: white;
+    transition: 0.3s;
+}
+
+.payment-option:hover {
+    border-color: #8e44ad;
+    background: #faf5ff;
+}
+
+.payment-option input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
 </style>
 </head>
 
@@ -1225,33 +1258,31 @@ nav ul li a:hover{
 
     <h3>Payment Method</h3>
 
-    <div class="payment">
+<div class="payment-options">
 
-        <label>
-            <input
-                type="radio"
-                name="payment"
-                value="Online Payment">
-            💳 Online Payment
-        </label>
+    <label class="payment-option">
+        <input
+            type="radio"
+            name="payment"
+            value="Online Payment">
+        <span>💳 Online Payment</span>
+    </label>
 
-        <label>
-            <input
-                type="radio"
-                name="payment"
-                value="Cash on Delivery">
-            💵 Cash on Delivery
-        </label>
+    <label class="payment-option">
+        <input
+            type="radio"
+            name="payment"
+            value="Cash on Delivery">
+        <span>💵 Cash on Delivery</span>
+    </label>
 
-    </div>
+</div>
 
-    <button
-        class="place-order"
-        onclick="placeOrder()">
-
-        🛍️ Place Order
-
-    </button>
+<button
+    class="place-order"
+    onclick="placeOrder()">
+    🛍️ Place Order
+</button>
 
 </div>
 
